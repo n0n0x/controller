@@ -78,6 +78,7 @@ class HorizontalPodAutoscaler(Resource):
                 # only works with Deployments, RS and RC
                 'kind': target['kind'],
                 'name': target['metadata']['name'],
+                'apiVersion': 'apps/v1',
             }
         elif self.version() <= parse("1.2.0"):
             # api changed between version
