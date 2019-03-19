@@ -68,6 +68,9 @@ class HorizontalPodAutoscaler(Resource):
             'spec': {
                 'minReplicas': min_replicas,
                 'maxReplicas': max_replicas,
+                'scaleTargetRef': { 
+                    'apiVersion': 'apps/v1',
+                }
             }
         }
 
